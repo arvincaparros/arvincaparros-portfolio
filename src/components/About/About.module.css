@@ -1,0 +1,128 @@
+.section {
+  padding: 88px 0;
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 60px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.title {
+  font-size: clamp(26px, 3vw, 34px);
+  margin: 10px 0 18px;
+}
+
+.copy {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin-bottom: 22px;
+}
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  transition: gap 0.2s var(--ease);
+}
+
+.learnMore:hover {
+  gap: 12px;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1180px) {
+  .statGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .statGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statCard {
+  padding: 22px 18px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease);
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  background: var(--bg-panel-hover);
+}
+
+.statIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.statIcon :global(svg) {
+  width: 19px;
+  height: 19px;
+}
+
+.iconBlue {
+  color: var(--accent-blue);
+}
+.iconGreen {
+  color: var(--accent-green);
+}
+.iconPurple {
+  color: var(--accent-purple);
+}
+.iconCyan {
+  color: var(--accent-cyan);
+}
+
+.statValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.statSub {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
