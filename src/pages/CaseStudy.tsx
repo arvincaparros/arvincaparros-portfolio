@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { projects } from '../data/projects';
 import { ProjectVisual } from '../components/ProjectVisual/ProjectVisual';
@@ -31,6 +31,7 @@ export function CaseStudy() {
   }
 
   const otherProjects = projects.filter((p) => p.slug !== project.slug).slice(0, 3);
+  const hasLivePreview = project.livePreviewAvailable && Boolean(project.livePreviewUrl);
 
   return (
     <div className={styles.page}>
@@ -43,23 +44,50 @@ export function CaseStudy() {
         </div>
       </header>
 
-      <section className={styles.hero}>
+      <header className={styles.hero}>
         <div className="container">
-          <span className="eyebrow">Case Study</span>
-          <h1 className={styles.title}>{project.title}</h1>
-          <p className={styles.summary}>{project.description}</p>
-          <ul className={styles.tags}>
-            {project.tech.map((tech) => (
-              <li key={tech} className={styles.tag}>
-                {tech}
-              </li>
-            ))}
-          </ul>
-          <div className={styles.visualFrame}>
-            <ProjectVisual kind={project.visual} />
+          <div className={styles.heroGrid}>
+            <div className={styles.heroContent}>
+              <span className="eyebrow">Case Study</span>
+              <h1 className={styles.title}>{project.title}</h1>
+              <p className={styles.summary}>{project.description}</p>
+              <ul className={styles.tags}>
+                {project.tech.map((tech) => (
+                  <li key={tech} className={styles.tag}>
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+              {hasLivePreview && (
+                <a
+                  href={project.livePreviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.livePreviewLink}
+                  aria-label={`Open live preview of ${project.title}`}
+                >
+                  Live Preview
+                  <ExternalLink size={15} strokeWidth={2.5} aria-hidden="true" />
+                </a>
+              )}
+            </div>
+
+            <div className={styles.heroVisual}>
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={project.imageAlt ?? project.title}
+                  className={styles.caseStudyImage}
+                />
+              ) : (
+                // Projects without a real screenshot (project.image) fall back to the
+                // generated SVG illustration so every case study still has a visual.
+                <ProjectVisual kind={project.visual} />
+              )}
+            </div>
           </div>
         </div>
-      </section>
+      </header>
 
       <section className={styles.body}>
         <div className="container">
@@ -70,6 +98,23 @@ export function CaseStudy() {
                 <p className={styles.blockText}>{project.caseStudy[section.key]}</p>
               </div>
             ))}
+
+            {/*
+              Optional card: `features` is not part of the generic `sections` list above
+              because it's a string[] (a list), not a plain string like the other fields.
+              Guarding on length here keeps this compatible with any project whose
+              caseStudy has no `features` array — it simply renders nothing for them.
+            */}
+            {project.caseStudy.features && project.caseStudy.features.length > 0 && (
+              <div className={styles.block}>
+                <div className={styles.blockLabel}>Key Features</div>
+                <ul className={styles.featureList}>
+                  {project.caseStudy.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </section>

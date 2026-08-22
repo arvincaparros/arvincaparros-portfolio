@@ -23,7 +23,7 @@ const codeLines: CodeLine[] = [
     { text: '[', cls: 'punct' },
   ],
   [{ text: "    'Full Stack',", cls: 'str' }],
-  [{ text: "    'AI Applications',", cls: 'str' }],
+  [{ text: "    'API & Integrations',", cls: 'str' }],
   [{ text: "    'Automation Workflows'", cls: 'str' }],
   [{ text: '  ];', cls: 'punct' }],
   [{ text: '' }],

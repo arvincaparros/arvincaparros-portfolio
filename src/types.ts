@@ -13,6 +13,7 @@ export interface CaseStudyContent {
   technology: string;
   challenges: string;
   result: string;
+  features?: string[];
 }
 
 export interface Project {
@@ -22,6 +23,11 @@ export interface Project {
   tech: string[];
   ctaLabel: string;
   visual: ProjectVisualKind;
+  image?: string;
+  imageAlt?: string;
+  // Show Live Preview only when the project has an available deployment URL.
+  livePreviewAvailable: boolean;
+  livePreviewUrl?: string;
   caseStudy: CaseStudyContent;
 }
 

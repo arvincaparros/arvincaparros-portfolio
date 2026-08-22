@@ -53,7 +53,7 @@ export function Contact() {
                 </span>
                 <span className={styles.cardText}>
                   <span className={styles.cardLabel}>{card.label}</span>
-                  <span className={styles.cardValue}>{card.value}</span>
+                  <span className={styles.cardValue}>&nbsp;  {card.value}</span>
                 </span>
               </a>
             </Reveal>

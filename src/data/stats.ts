@@ -20,7 +20,7 @@ export const stats: StatCard[] = [
     icon: 'layers',
   },
   {
-    value: 'AI & Automation',
+    value: 'Exploring AI & Automation',
     label: 'Current Focus',
     sublabel: 'AI agents, LLMs, n8n & automation',
     icon: 'brain',

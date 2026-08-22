@@ -65,6 +65,7 @@
 
 .statCard {
   padding: 22px 18px;
+  height: 300px;
   background: var(--bg-panel);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -75,6 +76,14 @@
   transform: translateY(-4px);
   border-color: var(--border-strong);
   background: var(--bg-panel-hover);
+}
+
+@media (max-width: 600px) {
+  .statCard {
+    min-height: 0;
+    height: auto;
+    padding: 20px 16px;
+  }
 }
 
 .statIcon {

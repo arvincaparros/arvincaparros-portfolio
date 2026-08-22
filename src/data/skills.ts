@@ -44,7 +44,7 @@ export const skillCategories: SkillCategory[] = [
       { name: 'LLM Integration', level: 'exploring' },
       { name: 'Multi-Agent Systems', level: 'exploring' },
       { name: 'n8n', level: 'working' },
-      { name: 'Power Automate', level: 'working' },
+      { name: 'RPA', level: 'working' },
       { name: 'Workflow Automation', level: 'working' },
     ],
   },

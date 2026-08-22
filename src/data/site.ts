@@ -1,7 +1,7 @@
 export const site = {
   name: 'Arvin Caparros',
   role: 'Software Engineer',
-  email: 'arvincaparros.dev@gmail.com',
+  email: 'arvinmcaparros@gmail.com',
   github: 'https://github.com/arvincaparros',
   githubLabel: 'github.com/arvincaparros',
   linkedin: 'https://linkedin.com/in/arvin-caparros',
