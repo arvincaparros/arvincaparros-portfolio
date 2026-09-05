@@ -13,6 +13,7 @@ export const projects: Project[] = [
     title: 'Japanese Meal Reservation System',
     description:
       'A meal reservation system with advance booking, administrative management, and monthly meal-deduction monitoring.',
+    category: 'full-stack',
     tech: ['C#', 'ASP.NET Core', 'Bootstrap', 'PostgreSQL'],
     ctaLabel: 'View Case Study',
     visual: 'dashboard',
@@ -60,6 +61,7 @@ export const projects: Project[] = [
     title: 'Parts Control System',
     description:
       'A centralized system for parts tracking, activity monitoring, quality control, reporting, and approval workflows.',
+    category: 'full-stack',
     tech: ['C#', 'ASP.NET Core', 'Bootstrap', 'PostgreSQL'],
     ctaLabel: 'View Case Study',
     visual: 'dashboard',
@@ -110,6 +112,7 @@ export const projects: Project[] = [
     title: 'Man-Hour Management System',
     description:
       'A business application for managing man-hour and COPQ records, approval workflows, reports, and analytics.',
+    category: 'full-stack',
     tech: ['C#', 'WinForms', 'SQL Server', 'Tableau'],
     ctaLabel: 'View Case Study',
     visual: 'dashboard',
@@ -155,6 +158,7 @@ export const projects: Project[] = [
     title: "Armando's Furniture Business System",
     description:
       'A full-stack business system for production optimization, demand forecasting, resource management, and AI-assisted forecast analysis.',
+    category: 'full-stack',
     tech: ['React', 'FastAPI', 'PostgreSQL', 'Gemini AI'],
     ctaLabel: 'View Case Study',
     visual: 'dashboard',
@@ -207,6 +211,7 @@ export const projects: Project[] = [
     title: 'Support Ticket Automation',
     description:
       'Automated support-ticket processing using workflow automation, APIs, databases, and AI classification.',
+    category: 'automation',
     tech: ['n8n', 'PostgreSQL', 'REST API', 'AI'],
     ctaLabel: 'View Workflow',
     visual: 'workflow',

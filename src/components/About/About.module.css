@@ -109,11 +109,11 @@
 .iconGreen {
   color: var(--accent-green);
 }
-.iconPurple {
-  color: var(--accent-purple);
-}
 .iconCyan {
   color: var(--accent-cyan);
+}
+.iconOrange {
+  color: var(--accent-orange);
 }
 
 .statValue {

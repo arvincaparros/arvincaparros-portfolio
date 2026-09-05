@@ -1,4 +1,4 @@
-import { Bot, Database, LayoutTemplate, Server, Wrench } from 'lucide-react';
+import { Bot, Database, LayoutTemplate, Server, Workflow, Wrench } from 'lucide-react';
 import { skillCategories } from '../../data/skills';
 import { Reveal } from '../Reveal/Reveal';
 import styles from './Skills.module.css';
@@ -6,19 +6,27 @@ import type { SkillCategory, SkillLevel } from '../../types';
 
 const categoryIcons: Record<SkillCategory['icon'], React.ComponentType<{ size?: number }>> = {
   backend: Server,
+  'power-platform': Workflow,
   frontend: LayoutTemplate,
-  database: Database,
   ai: Bot,
+  database: Database,
   devops: Wrench,
 };
 
 const categoryTints: Record<SkillCategory['icon'], string> = {
   backend: 'var(--accent-blue)',
+  'power-platform': 'var(--accent-orange)',
   frontend: 'var(--accent-cyan)',
-  database: 'var(--accent-green)',
   ai: 'var(--accent-purple)',
+  database: 'var(--accent-green)',
   devops: 'var(--accent-amber)',
 };
+
+const topSkills = [
+  { rank: '01', label: 'Software Engineering' },
+  { rank: '02', label: 'Power Platform' },
+  { rank: '03', label: 'AI & Automation' },
+];
 
 const levelDotClass: Record<SkillLevel, string> = {
   core: styles.dotCore,
@@ -38,6 +46,17 @@ export function Skills() {
       <div className="container">
         <span className="eyebrow">Skills</span>
         <h2 className={styles.title}>Technical Skills</h2>
+
+        <ol className={styles.topSkills}>
+          {topSkills.map((skill) => (
+            <li key={skill.rank} className={styles.topSkill}>
+              <span className={styles.topSkillRank} aria-hidden="true">
+                {skill.rank}
+              </span>
+              {skill.label}
+            </li>
+          ))}
+        </ol>
 
         <ul className={styles.grid}>
           {skillCategories.map((category, i) => {

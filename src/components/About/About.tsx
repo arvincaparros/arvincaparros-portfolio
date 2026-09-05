@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Calendar, CodeXml, Layers } from 'lucide-react';
+import { ArrowRight, Calendar, CodeXml, Layers, Workflow } from 'lucide-react';
 import { stats } from '../../data/stats';
 import { Reveal } from '../Reveal/Reveal';
 import styles from './About.module.css';
@@ -8,14 +8,14 @@ const icons: Record<StatCard['icon'], React.ComponentType<{ size?: number; strok
   calendar: Calendar,
   code: CodeXml,
   layers: Layers,
-  brain: Brain,
+  workflow: Workflow,
 };
 
 const iconTints: Record<StatCard['icon'], string> = {
   calendar: styles.iconBlue,
   code: styles.iconGreen,
   layers: styles.iconCyan,
-  brain: styles.iconPurple,
+  workflow: styles.iconOrange,
 };
 
 export function About() {
@@ -29,8 +29,8 @@ export function About() {
             <p className={styles.copy}>
               I'm a Software Engineer with 4+ years of experience building business applications
               and internal systems. My journey began with .NET and desktop development, and I've
-              expanded into modern web technologies, AI-powered applications, and workflow
-              automation.
+              expanded into modern web technologies, AI-powered applications, and Power Platform
+              automation with Power Apps and Power Automate.
             </p>
             <a href="#experience" className={styles.learnMore}>
               Learn more about me

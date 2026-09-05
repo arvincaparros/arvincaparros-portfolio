@@ -3,7 +3,7 @@ import { site } from '../../data/site';
 import { GithubIcon, LinkedinIcon } from '../icons/BrandIcons';
 import styles from './Hero.module.css';
 
-const pills = ['Full Stack Development', 'AI & Agents', 'Automation', 'APIs', 'Databases'];
+const pills = ['Full Stack Development', 'Power Apps & Automate', 'AI & Agents', 'APIs', 'Databases'];
 
 type Token = { text: string; cls?: 'kw' | 'cls' | 'prop' | 'str' | 'punct' };
 type CodeLine = Token[];
@@ -49,8 +49,8 @@ export function Hero() {
           </h1>
           <p className={styles.role}>Software Engineer</p>
           <p className={styles.description}>
-            I build business applications, AI-powered systems, and automation workflows that
-            solve real problems.
+            I build business applications, AI-powered systems, and Power Platform automation
+            with Power Apps and Power Automate that solve real problems.
           </p>
 
           <ul className={styles.pills}>

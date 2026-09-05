@@ -16,10 +16,13 @@ export interface CaseStudyContent {
   features?: string[];
 }
 
+export type ProjectCategory = 'full-stack' | 'power-platform' | 'automation';
+
 export interface Project {
   slug: string;
   title: string;
   description: string;
+  category: ProjectCategory;
   tech: string[];
   ctaLabel: string;
   visual: ProjectVisualKind;
@@ -40,7 +43,7 @@ export interface SkillItem {
 
 export interface SkillCategory {
   name: string;
-  icon: 'backend' | 'frontend' | 'database' | 'ai' | 'devops';
+  icon: 'backend' | 'power-platform' | 'frontend' | 'ai' | 'database' | 'devops';
   items: SkillItem[];
 }
 
@@ -62,5 +65,5 @@ export interface StatCard {
   value: string;
   label: string;
   sublabel: string;
-  icon: 'calendar' | 'code' | 'layers' | 'brain';
+  icon: 'calendar' | 'code' | 'layers' | 'workflow';
 }

@@ -20,9 +20,9 @@ export const stats: StatCard[] = [
     icon: 'layers',
   },
   {
-    value: 'Exploring AI & Automation',
-    label: 'Current Focus',
-    sublabel: 'AI agents, LLMs, n8n & automation',
-    icon: 'brain',
+    value: 'Power Platform',
+    label: 'Automation Specialist',
+    sublabel: 'Power Apps, Power Automate, AI agents & n8n workflows',
+    icon: 'workflow',
   },
 ];

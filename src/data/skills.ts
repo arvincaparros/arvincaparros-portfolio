@@ -15,6 +15,16 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
+    name: 'Power Platform',
+    icon: 'power-platform',
+    items: [
+      { name: 'Power Automate', level: 'working' },
+      { name: 'Power Apps', level: 'working' },
+      { name: 'RPA', level: 'working' },
+      { name: 'Workflow Automation', level: 'working' },
+    ],
+  },
+  {
     name: 'Frontend',
     icon: 'frontend',
     items: [
@@ -28,24 +38,22 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    name: 'Database',
-    icon: 'database',
-    items: [
-      { name: 'SQL Server', level: 'core' },
-      { name: 'PostgreSQL', level: 'working' },
-      { name: 'MySQL', level: 'working' },
-    ],
-  },
-  {
-    name: 'AI / Automation',
+    name: 'AI & Agents',
     icon: 'ai',
     items: [
       { name: 'AI APIs', level: 'exploring' },
       { name: 'LLM Integration', level: 'exploring' },
       { name: 'Multi-Agent Systems', level: 'exploring' },
       { name: 'n8n', level: 'working' },
-      { name: 'RPA', level: 'working' },
-      { name: 'Workflow Automation', level: 'working' },
+    ],
+  },
+  {
+    name: 'Database',
+    icon: 'database',
+    items: [
+      { name: 'SQL Server', level: 'core' },
+      { name: 'PostgreSQL', level: 'working' },
+      { name: 'MySQL', level: 'working' },
     ],
   },
   {
