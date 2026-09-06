@@ -18,6 +18,12 @@ export interface CaseStudyContent {
 
 export type ProjectCategory = 'full-stack' | 'power-platform' | 'automation';
 
+export interface ProjectSlide {
+  image: string;
+  imageAlt: string;
+  label: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -32,6 +38,9 @@ export interface Project {
   livePreviewAvailable: boolean;
   livePreviewUrl?: string;
   caseStudy: CaseStudyContent;
+  // When present, the case-study hero renders a Carousel through these slides
+  // instead of the static `image`. The project-card grid thumbnail still uses `image`.
+  slides?: ProjectSlide[];
 }
 
 export type SkillLevel = 'core' | 'working' | 'exploring';

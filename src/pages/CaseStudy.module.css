@@ -101,11 +101,15 @@
   transform: translateY(-2px);
 }
 
-/* Compact framed card, aligned right — replaces the old full-width banner. */
+/* Layout slot, aligned right — holds either the static framed card or the Carousel. */
 .heroVisual {
   width: 100%;
   max-width: 600px;
   justify-self: end;
+}
+
+/* Compact framed card for the static-image case studies only; Carousel frames itself. */
+.heroVisualFrame {
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -154,7 +158,6 @@
 
   .heroVisual {
     max-width: 100%;
-    aspect-ratio: 4 / 3;
   }
 
   .tags {

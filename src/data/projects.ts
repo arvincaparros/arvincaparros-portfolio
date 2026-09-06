@@ -207,6 +207,72 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: 'it-asset-request-approval-system',
+    title: 'IT Asset Request & Approval System',
+    description:
+      'An approval automation system for IT equipment and software requests, with conditional escalation for high-urgency items, real-time status tracking, and automated notifications.',
+    category: 'power-platform',
+    tech: ['Power Apps', 'Power Automate', 'SharePoint'],
+    ctaLabel: 'View Case Study',
+    visual: 'dashboard',
+    image: '/projects/it-asset-request.png',
+    imageAlt:
+      'IT Asset Request & Approval System displayed on desktop and mobile devices',
+    livePreviewAvailable: false,
+    slides: [
+      {
+        image: '/projects/it-asset-dashboard.png',
+        imageAlt: 'IT Asset Request & Approval System dashboard screen on desktop and mobile',
+        label: 'Dashboard',
+      },
+      {
+        image: '/projects/it-asset-new-request.png',
+        imageAlt: 'IT Asset Request & Approval System new request form on desktop and mobile',
+        label: 'New Request',
+      },
+      {
+        image: '/projects/it-asset-approvals.png',
+        imageAlt: 'IT Asset Request & Approval System approvals screen on desktop and mobile',
+        label: 'Approvals',
+      },
+      {
+        image: '/projects/it-asset-reports.png',
+        imageAlt: 'IT Asset Request & Approval System reports screen on desktop and mobile',
+        label: 'Reports',
+      },
+    ],
+    caseStudy: {
+      problem:
+        'IT equipment and software requests were submitted through email and chat with no consistent approval process, making it difficult to track request status, prioritize urgent cases, or maintain a record of approvals.',
+
+      solution:
+        'Developed a Power Platform solution that lets employees submit IT asset requests through a Power Apps form, routes them through automated approval workflows in Power Automate, and stores request and approval records in SharePoint.',
+
+      architecture:
+        'A Power Apps canvas app for request submission and status tracking, Power Automate flows for approval routing and notifications, and SharePoint lists for storing request, approval, and asset data.',
+
+      contribution:
+        'Designed the request-submission app, approval workflow logic, conditional escalation rules, notification flows, and the SharePoint data structure end to end.',
+
+      technology: 'Power Apps, Power Automate, SharePoint, and Office 365 connectors.',
+
+      challenges:
+        'Implemented conditional escalation for high-urgency requests, multi-level approval routing, real-time status updates, and reliable automated notifications across the request lifecycle.',
+
+      result:
+        'Replaced ad hoc email requests with a centralized, trackable approval process, reduced turnaround time on urgent requests, and gave requesters clear visibility into request status.',
+
+      features: [
+        'Request submission form for IT equipment and software',
+        'Conditional escalation routing for high-urgency requests',
+        'Multi-level approval workflow with manager and IT sign-off',
+        'Real-time request status tracking for requesters',
+        'Automated email notifications for submissions, approvals, and rejections',
+        'Centralized SharePoint record of requests, approvals, and assets',
+      ],
+    },
+  },
+  {
     slug: 'support-ticket-automation',
     title: 'Support Ticket Automation',
     description:

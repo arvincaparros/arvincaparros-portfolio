@@ -4,6 +4,7 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import { projects } from '../data/projects';
 import { ProjectVisual } from '../components/ProjectVisual/ProjectVisual';
 import { ProjectCard } from '../components/ProjectCard/ProjectCard';
+import { Carousel } from '../components/Carousel/Carousel';
 import { Contact } from '../components/Contact/Contact';
 import styles from './CaseStudy.module.css';
 import type { CaseStudyContent } from '../types';
@@ -73,16 +74,22 @@ export function CaseStudy() {
             </div>
 
             <div className={styles.heroVisual}>
-              {project.image ? (
-                <img
-                  src={project.image}
-                  alt={project.imageAlt ?? project.title}
-                  className={styles.caseStudyImage}
-                />
+              {project.slides && project.slides.length > 0 ? (
+                <Carousel slides={project.slides} />
+              ) : project.image ? (
+                <div className={styles.heroVisualFrame}>
+                  <img
+                    src={project.image}
+                    alt={project.imageAlt ?? project.title}
+                    className={styles.caseStudyImage}
+                  />
+                </div>
               ) : (
                 // Projects without a real screenshot (project.image) fall back to the
                 // generated SVG illustration so every case study still has a visual.
-                <ProjectVisual kind={project.visual} />
+                <div className={styles.heroVisualFrame}>
+                  <ProjectVisual kind={project.visual} />
+                </div>
               )}
             </div>
           </div>
