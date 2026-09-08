@@ -215,9 +215,9 @@ export const projects: Project[] = [
     tech: ['Power Apps', 'Power Automate', 'SharePoint'],
     ctaLabel: 'View Case Study',
     visual: 'dashboard',
-    image: '/projects/it-asset-request.png',
+    image: '/projects/it-asset-dashboard.png',
     imageAlt:
-      'IT Asset Request & Approval System displayed on desktop and mobile devices',
+      'IT Asset Request & Approval System dashboard displayed on desktop and mobile devices',
     livePreviewAvailable: false,
     slides: [
       {
