@@ -10,9 +10,19 @@
   align-items: start;
 }
 
+.processColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
 @media (max-width: 980px) {
   .layout {
     grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .processColumn {
     gap: 56px;
   }
 }

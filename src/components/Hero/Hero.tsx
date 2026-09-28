@@ -3,7 +3,7 @@ import { site } from '../../data/site';
 import { GithubIcon, LinkedinIcon } from '../icons/BrandIcons';
 import styles from './Hero.module.css';
 
-const pills = ['Full Stack Development', 'Power Apps & Automate', 'AI & Agents', 'APIs', 'Databases'];
+const pills = ['Workflow Automation', 'AI & LLM Integration', 'Power Apps & Automate', 'Full Stack Development', 'APIs & Integrations', 'Databases'];
 
 type Token = { text: string; cls?: 'kw' | 'cls' | 'prop' | 'str' | 'punct' };
 type CodeLine = Token[];
@@ -22,8 +22,8 @@ const codeLines: CodeLine[] = [
     { text: ' = ', cls: 'punct' },
     { text: '[', cls: 'punct' },
   ],
-  [{ text: "    'Full Stack',", cls: 'str' }],
-  [{ text: "    'API & Integrations',", cls: 'str' }],
+  [{ text: "    'System Development & Integration',", cls: 'str' }],
+  [{ text: "    'API & AI Integrations',", cls: 'str' }],
   [{ text: "    'Automation Workflows'", cls: 'str' }],
   [{ text: '  ];', cls: 'punct' }],
   [{ text: '' }],
@@ -47,10 +47,9 @@ export function Hero() {
           <h1 className={styles.name}>
             ARVIN <span className="gradient-text">CAPARROS</span>
           </h1>
-          <p className={styles.role}>Software Engineer</p>
+          <p className={styles.role}>Software Engineer | AI & Automation</p>
           <p className={styles.description}>
-            I build business applications, AI-powered systems, and Power Platform automation
-            with Power Apps and Power Automate that solve real problems.
+          I build business applications, AI-powered solutions, and automation workflows that connect systems, streamline processes, and solve real business problems.
           </p>
 
           <ul className={styles.pills}>
@@ -66,10 +65,10 @@ export function Hero() {
               View My Work
               <ArrowRight size={16} strokeWidth={2.5} aria-hidden="true" />
             </a>
-            <a href={site.resumeHref} download className={styles.btnSecondary}>
+            {/* <a href={site.resumeHref} download className={styles.btnSecondary}>
               Download Resume
               <Download size={16} strokeWidth={2.25} aria-hidden="true" />
-            </a>
+            </a> */}
           </div>
 
           <div className={styles.social}>

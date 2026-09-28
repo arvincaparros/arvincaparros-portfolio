@@ -2,6 +2,29 @@ import type { SkillCategory } from '../types';
 
 export const skillCategories: SkillCategory[] = [
   {
+    name: 'Automation & Integration',
+    icon: 'ai',
+    items: [
+      { name: 'n8n', level: 'working' },
+      { name: 'Power Automate', level: 'working' },
+      { name: 'Workflow Automation', level: 'working' },
+      { name: 'REST APIs', level: 'working' },
+      { name: 'Webhooks', level: 'working' },
+      { name: 'JSON', level: 'working' },
+    ],
+  },
+   {
+    name: 'AI & LLM',
+    icon: 'ai',
+    items: [
+      { name: 'LLM Integration', level: 'working' },
+      { name: 'AI APIs', level: 'working' },
+      { name: 'Tool Calling', level: 'working' },
+      { name: 'AI Agents', level: 'working' },
+      { name: 'Prompt Engineering', level: 'working' },
+    ],
+  },
+  {
     name: 'Backend',
     icon: 'backend',
     items: [
@@ -10,8 +33,7 @@ export const skillCategories: SkillCategory[] = [
       { name: 'ASP.NET Core', level: 'core' },
       { name: 'Web API', level: 'core' },
       { name: 'Entity Framework Core', level: 'core' },
-      { name: 'SQL', level: 'core' },
-      { name: 'LINQ', level: 'core' },
+      { name: 'Python', level: 'core' },
     ],
   },
   {
@@ -20,11 +42,21 @@ export const skillCategories: SkillCategory[] = [
     items: [
       { name: 'Power Automate', level: 'working' },
       { name: 'Power Apps', level: 'working' },
-      { name: 'RPA', level: 'working' },
-      { name: 'Workflow Automation', level: 'working' },
+      { name: 'SharePoint', level: 'working' },
+      { name: 'Dataverse', level: 'working' },
     ],
   },
   {
+    name: 'Database',
+    icon: 'database',
+    items: [
+      { name: 'SQL Server', level: 'core' },
+      { name: 'PostgreSQL', level: 'core' },
+      { name: 'MySQL', level: 'working' },
+        { name: 'SQL', level: 'working' },
+    ],
+  },
+   {
     name: 'Frontend',
     icon: 'frontend',
     items: [
@@ -34,26 +66,6 @@ export const skillCategories: SkillCategory[] = [
       { name: 'JavaScript', level: 'core' },
       { name: 'HTML5', level: 'core' },
       { name: 'CSS3', level: 'core' },
-      { name: 'Vite', level: 'working' },
-    ],
-  },
-  {
-    name: 'AI & Agents',
-    icon: 'ai',
-    items: [
-      { name: 'AI APIs', level: 'exploring' },
-      { name: 'LLM Integration', level: 'exploring' },
-      { name: 'Multi-Agent Systems', level: 'exploring' },
-      { name: 'n8n', level: 'working' },
-    ],
-  },
-  {
-    name: 'Database',
-    icon: 'database',
-    items: [
-      { name: 'SQL Server', level: 'core' },
-      { name: 'PostgreSQL', level: 'working' },
-      { name: 'MySQL', level: 'working' },
     ],
   },
   {
@@ -62,11 +74,10 @@ export const skillCategories: SkillCategory[] = [
     items: [
       { name: 'Git', level: 'core' },
       { name: 'GitHub', level: 'core' },
-      { name: 'VS Code', level: 'core' },
+      { name: 'GitLab', level: 'core' },
       { name: 'Docker', level: 'working' },
-      { name: 'IIS', level: 'working' },
       { name: 'Postman', level: 'working' },
-      { name: 'GitLab', level: 'working' },
+      { name: 'IIS', level: 'working' },
     ],
   },
 ];

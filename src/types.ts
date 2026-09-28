@@ -70,6 +70,13 @@ export interface ProcessStep {
   icon: 'understand' | 'design' | 'build' | 'integrate' | 'improve';
 }
 
+export interface AutomateStep {
+  number: string;
+  title: string;
+  description: string;
+  icon: 'discover' | 'design' | 'automate' | 'integrate' | 'monitor';
+}
+
 export interface StatCard {
   value: string;
   label: string;

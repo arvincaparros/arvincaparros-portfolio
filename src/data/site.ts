@@ -6,6 +6,6 @@ export const site = {
   githubLabel: 'github.com/arvincaparros',
   linkedin: 'https://linkedin.com/in/arvin-caparros',
   linkedinLabel: 'linkedin.com/in/arvin-caparros',
-  resumeHref: '/Arvin_Caparros_Resume.pdf',
+  resumeHref: '/Arvin_Caparros_Software_Automation_Engineer_Resume.pdf',
   year: 2026,
 };

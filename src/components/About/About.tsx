@@ -25,12 +25,9 @@ export function About() {
         <div className={styles.layout}>
           <Reveal>
             <span className="eyebrow">About Me</span>
-            <h2 className={styles.title}>Grounded in fundamentals, focused on what's next</h2>
+            <h2 className={styles.title}>Software engineering foundation, focused on AI & automation.</h2>
             <p className={styles.copy}>
-              I'm a Software Engineer with 4+ years of experience building business applications
-              and internal systems. My journey began with .NET and desktop development, and I've
-              expanded into modern web technologies, AI-powered applications, and Power Platform
-              automation with Power Apps and Power Automate.
+             I’m a Software Engineer with around 5 years of experience building business applications and internal systems. My background in C#, .NET, Python, web development, APIs, and databases now extends into workflow automation, system integration, and AI-powered applications.
             </p>
             <a href="#experience" className={styles.learnMore}>
               Learn more about me

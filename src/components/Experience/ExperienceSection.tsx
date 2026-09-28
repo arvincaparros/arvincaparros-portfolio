@@ -1,5 +1,6 @@
 import { Experience } from './Experience';
 import { HowIBuild } from '../HowIBuild/HowIBuild';
+import { HowIAutomate } from '../HowIBuild/HowIAutomate';
 import styles from './ExperienceSection.module.css';
 
 export function ExperienceSection() {
@@ -8,7 +9,10 @@ export function ExperienceSection() {
       <div className="container">
         <div className={styles.layout}>
           <Experience />
-          <HowIBuild />
+          <div className={styles.processColumn}>
+            <HowIBuild />
+            <HowIAutomate />
+          </div>
         </div>
       </div>
     </section>
