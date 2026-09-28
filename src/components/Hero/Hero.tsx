@@ -1,4 +1,4 @@
-import { ArrowRight, Braces, Brain, Database, Download, Mail, Settings } from 'lucide-react';
+import { ArrowRight, Braces, Brain, Database, Mail, Settings } from 'lucide-react';
 import { site } from '../../data/site';
 import { GithubIcon, LinkedinIcon } from '../icons/BrandIcons';
 import styles from './Hero.module.css';
