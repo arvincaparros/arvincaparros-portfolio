@@ -3,7 +3,7 @@ import type { ExperienceEntry } from '../types';
 export const experience: ExperienceEntry[] = [
   {
     period: '2026 — Present',
-    role: 'Software Engineer',
+    role: 'Software Engineer — AI Applications & Integrations',
     company: 'Uni-President Information Philippines Corporation',
     highlights: [
       'Develop AI assistant features and LLM integrations',
@@ -15,8 +15,8 @@ export const experience: ExperienceEntry[] = [
   },
   {
     period: '2022 — 2026',
-    role: 'Full Stack .NET Developer',
-    company: 'Brother Industries Philippines',
+    role: 'Software Developer — Internal Systems & Automation',
+    company: 'Brother Industries Philippines Inc.',
     highlights: [
       'Developed and automated internal business processes',
       'Built REST APIs and system integrations using ASP.NET Core',
