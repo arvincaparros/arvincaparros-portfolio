@@ -108,9 +108,14 @@
   justify-self: end;
 }
 
-/* Compact framed card for the static-image case studies only; Carousel frames itself. */
+/*
+ * Compact framed card for the static-image case studies only; Carousel frames itself.
+ * Same 16:9 box + object-fit: contain + light-blue backdrop as Carousel's .slideImage,
+ * so every project's hero image sits inside an identical frame regardless of its
+ * source dimensions, with no cropping and no per-project overrides.
+ */
 .heroVisualFrame {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -122,8 +127,9 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  background: #dcecff;
 }
 
 @media (max-width: 900px) {

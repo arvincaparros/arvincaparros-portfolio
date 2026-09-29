@@ -107,11 +107,62 @@ export const projects: Project[] = [
     tech: ['React', 'FastAPI', 'PostgreSQL', 'Gemini AI'],
     ctaLabel: 'View Case Study',
     visual: 'dashboard',
-    image: '/projects/armandos-furniture.png',
+    image: '/projects/armandos-furniture/dashboard.png',
     imageAlt:
       "Armando's Furniture Business dashboard showing production recommendations, resource utilization, and demand forecasting",
     livePreviewAvailable: true,
     livePreviewUrl: 'https://armando-furniture-business.vercel.app/dashboard',
+    // TODO: placeholder screenshots — swap each `image` path below for the real
+    // screenshot once available. Keep the same filename (or update the path) and
+    // each slide's `label`/`imageAlt` for that screen; the gallery (Carousel) needs
+    // no code changes when the images are replaced.
+    slides: [
+      {
+        image: '/projects/armandos-furniture/dashboard.png',
+        imageAlt: "Armando's Furniture Business System dashboard screen (placeholder)",
+        label: 'Dashboard',
+      },
+      {
+        image: '/projects/armandos-furniture/resource-management.png',
+        imageAlt: "Armando's Furniture Business System resource management screen (placeholder)",
+        label: 'Resource Management',
+      },
+      {
+        image: '/projects/armandos-furniture/product-data-management.png',
+        imageAlt: "Armando's Furniture Business System product data management screen (placeholder)",
+        label: 'Product Data Management',
+      },
+      {
+        image: '/projects/armandos-furniture/production-allocation.png',
+        imageAlt: "Armando's Furniture Business System production allocation screen (placeholder)",
+        label: 'Production Allocation',
+      },
+      {
+        image: '/projects/armandos-furniture/resource-utilization.png',
+        imageAlt: "Armando's Furniture Business System resource utilization screen (placeholder)",
+        label: 'Resource Utilization',
+      },
+      {
+        image: '/projects/armandos-furniture/resource-utilization-history.png',
+        imageAlt: "Armando's Furniture Business System resource utilization history screen (placeholder)",
+        label: 'Resource Utilization History',
+      },
+      {
+        image: '/projects/armandos-furniture/transaction-history.png',
+        imageAlt: "Armando's Furniture Business System transaction history screen (placeholder)",
+        label: 'Transaction History',
+      },
+      {
+        image: '/projects/armandos-furniture/optimization-history.png',
+        imageAlt: "Armando's Furniture Business System optimization history screen (placeholder)",
+        label: 'Optimization History',
+      },
+      {
+        image: '/projects/armandos-furniture/demand-forecasting.png',
+        imageAlt: "Armando's Furniture Business System demand forecasting screen (placeholder)",
+        label: 'Demand Forecasting',
+      },
+    ],
     caseStudy: {
       problem:
         'Furniture production planning relied on manual estimates, making it difficult to allocate resources efficiently, forecast product demand, and interpret forecasting results for production decisions.',
@@ -160,7 +211,7 @@ export const projects: Project[] = [
     tech: ['C#', 'ASP.NET Core', 'Bootstrap', 'PostgreSQL'],
     ctaLabel: 'View Case Study',
     visual: 'dashboard',
-    image: '/projects/pcs.png',
+    image: '/projects/pcs-2.png',
     imageAlt:
         'Parts Control System dashboard showing parts tracking, activity monitoring, and approval workflows',
     livePreviewAvailable: false,
@@ -211,7 +262,7 @@ export const projects: Project[] = [
     tech: ['C#', 'WinForms', 'SQL Server', 'Tableau'],
     ctaLabel: 'View Case Study',
     visual: 'dashboard',
-    image: '/projects/mhms.png',
+    image: '/projects/mhms-2.png',
     imageAlt:
       'Man-Hour Management System dashboard showing man-hour loss, COPQ analytics, reports, and approval monitoring',
     livePreviewAvailable: false,
@@ -257,7 +308,7 @@ export const projects: Project[] = [
     tech: ['C#', 'ASP.NET Core', 'Bootstrap', 'PostgreSQL'],
     ctaLabel: 'View Case Study',
     visual: 'dashboard',
-    image: '/projects/jmrs.png',
+    image: '/projects/jmrs-2.png',
     imageAlt:
       'Japanese Meal Reservation System displayed on desktop and mobile devices',
     livePreviewAvailable: false,
