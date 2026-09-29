@@ -9,6 +9,80 @@ const placeholderCaseStudy = {
 
 export const projects: Project[] = [
   {
+    slug: 'employee-onboarding-automation',
+    title: 'Employee Onboarding Workflow Automation',
+    description:
+      'An end-to-end n8n workflow that automates employee onboarding — capturing employee data, routing by department, generating checklists, and sending personalized notifications.',
+    category: 'automation',
+    tech: ['n8n', 'Google Sheets', 'Gmail', 'Workflow Automation'],
+    ctaLabel: 'View Case Study',
+    visual: 'workflow',
+    livePreviewAvailable: false,
+    image: '/projects/employee-onboarding-automation/employee-onboarding-n8n-workflow.png',
+    imageAlt: 'Employee Onboarding Automation full n8n workflow (placeholder)',
+    slides: [
+      {
+        image: '/projects/employee-onboarding-automation/employee-onboarding-n8n-workflow.png',
+        imageAlt: 'Employee Onboarding Automation full n8n workflow screen (placeholder)',
+        label: 'Employee Onboarding Automation – Full n8n Workflow',
+      },
+      {
+        image: '/projects/employee-onboarding-automation/onboarding-form.png',
+        imageAlt: 'New Employee Onboarding Form screen (placeholder)',
+        label: 'New Employee Onboarding Form',
+      },
+      {
+        image: '/projects/employee-onboarding-automation/onboarding-tracker.png',
+        imageAlt: 'Employee Onboarding Tracker screen (placeholder)',
+        label: 'Employee Onboarding Tracker',
+      },
+      {
+        image: '/projects/employee-onboarding-automation/welcome-email.png',
+        imageAlt: 'Personalized Employee Welcome Email screen (placeholder)',
+        label: 'Personalized Employee Welcome Email',
+      },
+      {
+        image: '/projects/employee-onboarding-automation/manager-notification.png',
+        imageAlt: 'Manager Onboarding Notification screen (placeholder)',
+        label: 'Manager Onboarding Notification',
+      },
+    ],
+    demoDataNotice:
+      'Demo Notice: All data shown in these screenshots is fictional sample data used for testing and demonstration purposes.',
+    caseStudy: {
+      problem:
+        'Manual employee onboarding often requires HR to repeatedly enter employee information, coordinate with managers, prepare onboarding requirements, send emails, and track progress across different systems.',
+
+      solution:
+        'Built an n8n workflow that centralizes and automates the initial onboarding process. A single form submission triggers employee record creation, department-specific business logic, personalized communications, manager notifications, and onboarding status tracking.',
+
+      architecture:
+        'An n8n workflow triggered by an onboarding form normalizes the submitted employee data, saves it to Google Sheets, and routes the employee through a department switch (Engineering, HR, Operations, or Other/General) to generate a department-specific onboarding checklist. The welcome email and manager notification branch from that checklist step so both have access to the employee details and the generated checklist, and a final step updates the employee\'s Google Sheets record from "Pending" to "Onboarding Started".',
+
+      contribution:
+        'Designed and built the end-to-end onboarding workflow in n8n, including the intake form, data normalization, Google Sheets integration, department-based routing logic, checklist generation, email templates, and onboarding status tracking.',
+
+      technology: 'n8n, Google Sheets, and Gmail, using conditional routing to handle department-specific business logic.',
+
+      challenges:
+        'Implemented department-based conditional routing, generated department-specific onboarding checklists, ensured the welcome email and manager notification both had access to the shared checklist data, and kept the Google Sheets tracker synced with each onboarding record\'s status.',
+
+      result:
+        'Reduces repetitive HR administration and provides a consistent onboarding process while keeping employee onboarding records visible in a centralized tracker.',
+
+      features: [
+        'Employee onboarding form',
+        'Automated employee record creation',
+        'Department-based conditional routing',
+        'Department-specific onboarding checklists',
+        'Personalized HTML welcome emails',
+        'Automatic manager notifications',
+        'Google Sheets onboarding tracking',
+        'Automatic onboarding status updates',
+      ],
+    },
+  },
+  {
     slug: 'support-ticket-automation',
     title: 'Support Ticket Automation',
     description:
@@ -344,82 +418,6 @@ export const projects: Project[] = [
         'Monthly meal-deduction monitoring for Japanese expatriates',
         'Reservation management with create, update, and cancellation functions',
         'Menu management with upload, update, and delete functions',
-      ],
-    },
-  },
-  {
-    slug: 'employee-onboarding-automation',
-    title: 'Employee Onboarding Workflow Automation',
-    description:
-      'An end-to-end n8n workflow that automates employee onboarding — capturing employee data, routing by department, generating checklists, and sending personalized notifications.',
-    category: 'automation',
-    tech: ['n8n', 'Google Sheets', 'Gmail', 'Workflow Automation'],
-    ctaLabel: 'View Case Study',
-    visual: 'workflow',
-    livePreviewAvailable: false,
-    // TODO: placeholder screenshots — swap each `image` path below for the real
-    // screenshot once available. Keep the same filename (or update the path) and
-    // each slide's `label`/`imageAlt` for that screen; the gallery (Carousel) needs
-    // no code changes when the images are replaced.
-    image: '/projects/employee-onboarding-automation/employee-onboarding-n8n-workflow.png',
-    imageAlt: 'Employee Onboarding Automation full n8n workflow (placeholder)',
-    slides: [
-      {
-        image: '/projects/employee-onboarding-automation/employee-onboarding-n8n-workflow.png',
-        imageAlt: 'Employee Onboarding Automation full n8n workflow screen (placeholder)',
-        label: 'Employee Onboarding Automation – Full n8n Workflow',
-      },
-      {
-        image: '/projects/employee-onboarding-automation/onboarding-form.png',
-        imageAlt: 'New Employee Onboarding Form screen (placeholder)',
-        label: 'New Employee Onboarding Form',
-      },
-      {
-        image: '/projects/employee-onboarding-automation/onboarding-tracker.png',
-        imageAlt: 'Employee Onboarding Tracker screen (placeholder)',
-        label: 'Employee Onboarding Tracker',
-      },
-      {
-        image: '/projects/employee-onboarding-automation/welcome-email.png',
-        imageAlt: 'Personalized Employee Welcome Email screen (placeholder)',
-        label: 'Personalized Employee Welcome Email',
-      },
-      {
-        image: '/projects/employee-onboarding-automation/manager-notification.png',
-        imageAlt: 'Manager Onboarding Notification screen (placeholder)',
-        label: 'Manager Onboarding Notification',
-      },
-    ],
-    caseStudy: {
-      problem:
-        'Manual employee onboarding often requires HR to repeatedly enter employee information, coordinate with managers, prepare onboarding requirements, send emails, and track progress across different systems.',
-
-      solution:
-        'Built an n8n workflow that centralizes and automates the initial onboarding process. A single form submission triggers employee record creation, department-specific business logic, personalized communications, manager notifications, and onboarding status tracking.',
-
-      architecture:
-        'An n8n workflow triggered by an onboarding form normalizes the submitted employee data, saves it to Google Sheets, and routes the employee through a department switch (Engineering, HR, Operations, or Other/General) to generate a department-specific onboarding checklist. The welcome email and manager notification branch from that checklist step so both have access to the employee details and the generated checklist, and a final step updates the employee\'s Google Sheets record from "Pending" to "Onboarding Started".',
-
-      contribution:
-        'Designed and built the end-to-end onboarding workflow in n8n, including the intake form, data normalization, Google Sheets integration, department-based routing logic, checklist generation, email templates, and onboarding status tracking.',
-
-      technology: 'n8n, Google Sheets, and Gmail, using conditional routing to handle department-specific business logic.',
-
-      challenges:
-        'Implemented department-based conditional routing, generated department-specific onboarding checklists, ensured the welcome email and manager notification both had access to the shared checklist data, and kept the Google Sheets tracker synced with each onboarding record\'s status.',
-
-      result:
-        'Reduces repetitive HR administration and provides a consistent onboarding process while keeping employee onboarding records visible in a centralized tracker.',
-
-      features: [
-        'Employee onboarding form',
-        'Automated employee record creation',
-        'Department-based conditional routing',
-        'Department-specific onboarding checklists',
-        'Personalized HTML welcome emails',
-        'Automatic manager notifications',
-        'Google Sheets onboarding tracking',
-        'Automatic onboarding status updates',
       ],
     },
   },

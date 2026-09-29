@@ -91,6 +91,13 @@ export function CaseStudy() {
                   <ProjectVisual kind={project.visual} />
                 </div>
               )}
+
+              {project.demoDataNotice && (
+                <p className={styles.demoNotice}>
+                  <span className={styles.demoNoticeLabel}>Demo Notice:</span>
+                  {project.demoDataNotice.replace(/^Demo Notice:\s*/i, ' ')}
+                </p>
+              )}
             </div>
           </div>
         </div>

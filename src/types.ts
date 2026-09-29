@@ -41,6 +41,9 @@ export interface Project {
   // When present, the case-study hero renders a Carousel through these slides
   // instead of the static `image`. The project-card grid thumbnail still uses `image`.
   slides?: ProjectSlide[];
+  // Optional small note rendered directly below the gallery on the case-study
+  // page (e.g. to flag that screenshots contain fictional sample data).
+  demoDataNotice?: string;
 }
 
 export type SkillLevel = 'core' | 'working' | 'exploring';

@@ -132,6 +132,19 @@
   background: #dcecff;
 }
 
+/* Subtle note below the gallery/thumbnails — never styled as a warning. */
+.demoNotice {
+  margin-top: 12px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.demoNoticeLabel {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
 @media (max-width: 900px) {
   .heroGrid {
     grid-template-columns: 1fr;
