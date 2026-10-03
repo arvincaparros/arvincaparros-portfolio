@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { CodeXml, Download, Menu, X } from 'lucide-react';
+import { CodeXml, Menu, X } from 'lucide-react';
 import { navItems } from '../../data/nav';
-import { site } from '../../data/site';
+import { ResumeDownload } from '../ResumeDownload/ResumeDownload';
 import styles from './Navbar.module.css';
 
 export function Navbar() {
@@ -66,14 +66,7 @@ export function Navbar() {
         </nav>
 
         <div className={styles.actions}>
-          <a
-            className={styles.resumeBtn}
-            href={site.resumeHref}
-            download
-          >
-            Download Resume
-            <Download size={15} strokeWidth={2.25} aria-hidden="true" />
-          </a>
+          <ResumeDownload triggerClassName={styles.resumeBtn} align="right" />
 
           <button
             type="button"
@@ -99,15 +92,12 @@ export function Navbar() {
               {item.label}
             </a>
           ))}
-          <a
-            className={styles.mobileResume}
-            href={site.resumeHref}
-            download
-            onClick={() => setMenuOpen(false)}
-          >
-            Download Resume
-            <Download size={16} strokeWidth={2.25} aria-hidden="true" />
-          </a>
+          <ResumeDownload
+            triggerClassName={styles.mobileResume}
+            variant="inline"
+            iconSize={16}
+            onSelect={() => setMenuOpen(false)}
+          />
         </div>
       )}
     </header>

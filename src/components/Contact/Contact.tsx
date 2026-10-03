@@ -1,6 +1,7 @@
-import { ArrowUp, Download, Mail } from 'lucide-react';
+import { ArrowUp, Mail } from 'lucide-react';
 import { site } from '../../data/site';
 import { GithubIcon, LinkedinIcon } from '../icons/BrandIcons';
+import { ResumeDownload } from '../ResumeDownload/ResumeDownload';
 import { Reveal } from '../Reveal/Reveal';
 import { ContactForm } from './ContactForm';
 import styles from './Contact.module.css';
@@ -61,10 +62,7 @@ export function Contact() {
         </ul>
 
         <div className={styles.resumeRow}>
-          <a className={styles.resumeBtn} href={site.resumeHref} download>
-            Download Resume
-            <Download size={16} strokeWidth={2.25} aria-hidden="true" />
-          </a>
+          <ResumeDownload triggerClassName={styles.resumeBtn} align="center" iconSize={16} />
         </div>
 
         <div className={styles.formDivider} role="separator" />

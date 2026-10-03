@@ -144,6 +144,7 @@
   font-weight: 600;
   color: #04060a;
   background: var(--gradient-primary);
+  border: none;
   border-radius: var(--radius-pill);
   box-shadow: 0 12px 30px -10px rgba(77, 141, 255, 0.5);
   transition: transform 0.2s var(--ease);

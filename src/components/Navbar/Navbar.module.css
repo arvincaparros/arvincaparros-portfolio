@@ -186,5 +186,6 @@
   font-weight: 600;
   color: #04060a;
   background: var(--gradient-primary);
+  border: none;
   border-radius: var(--radius-pill);
 }
