@@ -9,6 +9,83 @@ const placeholderCaseStudy = {
 
 export const projects: Project[] = [
   {
+    slug: 'ai-personal-assistant-line',
+    title: 'AI Personal Assistant — LINE, Groq, Gemini, Gmail & Google Calendar',
+    description:
+      'A conversational AI personal assistant built with n8n and the LINE Messaging API that intelligently routes general questions to Groq while personal productivity requests involving Gmail or Google Calendar are handled by Gemini with connected tools.',
+    category: 'automation',
+    tech: ['n8n', 'LINE Messaging API', 'Groq', 'Google Gemini'],
+    ctaLabel: 'View Case Study',
+    visual: 'assistant',
+    livePreviewAvailable: false,
+    image: '/projects/line-ai-personal-assistant/personal assistant-line.png',
+    imageAlt: 'AI Personal Assistant n8n workflow for LINE, Groq, Gemini, Gmail, and Google Calendar (placeholder)',
+    slides: [
+      {
+        image: '/projects/line-ai-personal-assistant/personal assistant-line.png',
+        imageAlt: 'AI Personal Assistant full n8n workflow screen (placeholder)',
+        label: 'AI Personal Assistant – Full n8n Workflow',
+      },
+      {
+        image: '/projects/line-ai-personal-assistant/line-personal-assistant-workflow.png',
+        imageAlt: 'AI Personal Assistant full n8n workflow screen (placeholder)',
+        label: 'AI Personal Assistant – Full n8n Workflow',
+      },
+      {
+        image: '/projects/line-ai-personal-assistant/line-calendar-sample-usecase.png',
+        imageAlt: 'Google Calendar query answered by Gemini in LINE chat (placeholder)',
+        label: 'Calendar Query via Gemini',
+      },
+      {
+        image: '/projects/line-ai-personal-assistant/line-email-sample-usecase.png',
+        imageAlt: 'Gmail search and summary answered by Gemini in LINE chat (placeholder)',
+        label: 'Gmail Search & Summary via Gemini',
+      },
+      {
+        image: '/projects/line-ai-personal-assistant/line-general-usecase.png',
+        imageAlt: 'General question answered by Groq (GPT-OSS 20B) in LINE chat (placeholder)',
+        label: 'General Question via Groq',
+      }
+    ],
+    caseStudy: {
+      problem:
+        'General questions and personal productivity requests, like checking email or an upcoming calendar event, have very different needs, but a single-model chatbot either wastes API calls answering simple questions with a tool-enabled model or cannot ground its answers in real Gmail and Calendar data.',
+
+      solution:
+        'Built a conversational AI personal assistant on n8n and the LINE Messaging API that routes each request by intent: general questions are handled by Groq using GPT-OSS 20B, while personal productivity requests are handled by Gemini with connected Gmail and Google Calendar tools.',
+
+      architecture:
+        'A LINE webhook triggers the n8n workflow, which starts a LINE loading indicator and passes the message to a request router. General questions are routed to a Groq-based assistant using GPT-OSS 20B, while personal requests are routed to a Gemini-based assistant with Gmail and Google Calendar tools connected through OAuth 2.0. Both paths include error handling and return their response through the LINE Messaging API.',
+
+      contribution:
+        'Designed and built the end-to-end n8n workflow, including the LINE webhook integration, rule-based request routing, the Groq and Gemini assistant configurations, Gmail and Google Calendar tool integration, OAuth 2.0 setup, and error handling for both AI paths.',
+
+      technology:
+        'n8n, LINE Messaging API, Groq (GPT-OSS 20B), Google Gemini, Gmail API, Google Calendar API, OAuth 2.0, and webhooks.',
+
+      challenges:
+        'Implemented rule-based routing to separate general questions from personal-data requests, reduced unnecessary Gemini API usage, kept Gmail and Calendar responses grounded in real account data, handled Asia/Manila timezone-aware date parsing, and added error handling for both AI paths that returns a user-friendly LINE response instead of a failed request.',
+
+      result:
+        'Reduced unnecessary Gemini API usage by separating general AI processing from tool-enabled personal productivity requests, while keeping Gmail- and Calendar-grounded responses accurate and giving users a mobile-friendly conversational interface through LINE.',
+
+      features: [
+        'LINE-based conversational interface',
+        'n8n workflow orchestration',
+        'General AI questions routed to Groq (GPT-OSS 20B)',
+        'Gmail and Calendar requests routed to Gemini with tools',
+        'Gmail search and email summarization',
+        'Google Calendar event retrieval',
+        'Rule-based request routing to reduce unnecessary Gemini API usage',
+        'OAuth 2.0 authentication for Google services',
+        'Asia/Manila timezone-aware date handling',
+        'LINE loading indicator while requests are processing',
+        'Error handling for both Gemini and Groq',
+        'Read-only Gmail and Calendar access in the current implementation',
+      ],
+    },
+  },
+  {
     slug: 'employee-onboarding-automation',
     title: 'Employee Onboarding Workflow Automation',
     description:
@@ -18,9 +95,14 @@ export const projects: Project[] = [
     ctaLabel: 'View Case Study',
     visual: 'workflow',
     livePreviewAvailable: false,
-    image: '/projects/employee-onboarding-automation/employee-onboarding-n8n-workflow.png',
+    image: '/projects/employee-onboarding-automation/automated-employee-onboarding-workflow.png',
     imageAlt: 'Employee Onboarding Automation full n8n workflow (placeholder)',
     slides: [
+      {
+        image: '/projects/employee-onboarding-automation/automated-employee-onboarding-workflow.png',
+        imageAlt: 'Employee Onboarding Automation full n8n workflow screen (placeholder)',
+        label: 'Employee Onboarding Automation – Full n8n Workflow',
+      },
       {
         image: '/projects/employee-onboarding-automation/employee-onboarding-n8n-workflow.png',
         imageAlt: 'Employee Onboarding Automation full n8n workflow screen (placeholder)',
